@@ -1,13 +1,14 @@
 #tabla {
   padding: 1px 1px 0px 1px;
-
+  border: 1px solid rgba(0, 0, 0, 0.125);
   background: white;
   border-radius: 8px;
 }
-.boto{
+.boto {
   border-radius: 6px 0px 0px 6px !important;
 }
-.table td, .table th{
+.table td,
+.table th {
   font-size: 15px;
 }
 @media only screen and (max-width: 1060px) {
@@ -18,7 +19,6 @@
     border-radius: 8px;
   }
 
-
   table,
   thead,
   tbody,
@@ -27,7 +27,6 @@
   tr {
     display: block;
   }
-
 
   thead tr {
     position: absolute;
@@ -65,15 +64,18 @@
 .texto {
   text-transform: capitalize;
 }
+.sinbold{
+  font-weight: normal !important;
+}
 .table td,
 table th {
   vertical-align: text-bottom !important;
   border-bottom: 1px solid #dee2e6 !important;
-  border-top:none !important;
+  border-top: none !important;
 }
 .swal2-show {
   width: 850px !important;
 }
-label{
+label {
   font-weight: bold;
 }

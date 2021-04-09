@@ -38,7 +38,7 @@ if (!isset($_SESSION['user'])) {
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class=""><img style="max-width: 240px; background-color: rgba(255, 255, 255, 0.90)" src="img/logo1.png" alt=""> </div>
       <div class="list-group list-group-flush">
-      <a href="principal.php" class="list-group-item list-group-item-action bg-light">Inicio</a>
+        <a href="principal.php" class="list-group-item list-group-item-action bg-light">Inicio</a>
         <a href="agenda.php" class="list-group-item list-group-item-action bg-light">Agenda</a>
         <a href="inventario.php" class="list-group-item list-group-item-action bg-light">Inventario</a>
         <a href="empleado.php" class="list-group-item list-group-item-action bg-light">Empleados</a>
@@ -66,9 +66,9 @@ if (!isset($_SESSION['user'])) {
 
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="detalles.php">ver mas detalles</a>
+                <a class="dropdown-item" href="detalles.php">Ver mas detalles</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="config\salir.php" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="config\salir.php" data-toggle="modal" data-target="#staticBackdrop">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout</a>
               </div>
             </li>
@@ -76,18 +76,19 @@ if (!isset($_SESSION['user'])) {
         </div>
 
         <!--  DIV MODAL LOGOUT  -->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir?</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">×</span>
                 </button>
               </div>
-              <div class="modal-body">¿Estas seguro de cerrar sesion?</div>
+              <div class="modal-body">
+                <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir?</h5>
+              </div>
               <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
                 <a class="btn btn-warning" href="config\salir.php">Salir</a>
               </div>
             </div>

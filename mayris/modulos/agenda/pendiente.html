@@ -40,7 +40,6 @@
                 <table class="table table-hover   ">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Descripcion</th>
                             <th>Precio</th>
@@ -54,8 +53,7 @@
                     <tbody v-for="items in info" :key="items.id">
 
                         <tr>
-                            <th data-th="ID">{{items.id_agenda}}</th>
-                            <td data-th="Nombre">{{items.nombre}}</td>
+                            <td class="texto" data-th="Nombre">{{items.nombre}}</td>
                             <td data-th="Descripcion">{{items.descripcion}}</td>
                             <td data-th="Precio">Q.{{items.precio}}.00</td>
                             <td data-th="Telefono">{{items.telefono}}</td>

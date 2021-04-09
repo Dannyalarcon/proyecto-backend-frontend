@@ -11,6 +11,7 @@ if (!isset($_SESSION['user'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,6 +24,7 @@ if (!isset($_SESSION['user'])) {
     <link href="css\simple-sidebar.css" rel="stylesheet">
     <link rel="stylesheet" href="css\style_principal.css">
 </head>
+
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
@@ -56,9 +58,9 @@ if (!isset($_SESSION['user'])) {
 
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="detalles.php">ver mas detalles</a>
+                                <a class="dropdown-item" href="detalles.php">Ver mas detalles</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="config\salir.php" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="config\salir.php" data-toggle="modal" data-target="#staticBackdrop">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout</a>
                             </div>
                         </li>
@@ -66,18 +68,19 @@ if (!isset($_SESSION['user'])) {
                 </div>
 
                 <!--  DIV MODAL LOGOUT  -->
-                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir?</h5>
                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <div class="modal-body">¿Estas seguro de cerrar sesion?</div>
+                            <div class="modal-body">
+                                <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir?</h5>
+                            </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
                                 <a class="btn btn-warning" href="config\salir.php">Salir</a>
                             </div>
                         </div>
